@@ -1,0 +1,22 @@
+.container-fluid {
+  margin-top: 2rem;
+  display: block;
+  justify-content: center;
+
+  a{
+    cursor:pointer;
+    text-decoration: none;
+  }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50%;
+}
+
+
+
+
+

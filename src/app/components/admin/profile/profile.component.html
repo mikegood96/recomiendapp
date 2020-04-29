@@ -1,0 +1,24 @@
+
+<form (ngSubmit)="onSaveUser(profileForm.value)" [formGroup]="profileForm">
+  <div class="card">
+    <div class="profile-photo">
+      <div class="label bottom">
+        <p>Cambiar</p>
+        <img class="card-img-top " [src]="currentImage" alt="photo profile" (click)="inputImageProfile.click()">
+      </div>
+      <input hidden type="file" #inputImageProfile formControlName="photoURL" (change)="handleImage($event?.target?.files[0])" />
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" class="form-control" formControlName="displayName"  placeholder="Nombre">
+      </div>
+      <div class="form-group">
+        <label>Correo</label>
+        <input type="text" class="form-control" formControlName="email"  placeholder="Email">
+      </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+
+    </div>
+  </div>
+</form>

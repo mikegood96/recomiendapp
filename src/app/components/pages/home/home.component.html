@@ -1,0 +1,37 @@
+<div class="row mx-0">
+  <div class="col-12 mt-4">
+    <h3 class="text-center">Mis listas</h3>
+  </div>
+  <div class="container-fluid mt-0" *ngIf="lists$ | async as lists; else loading">
+    <div class="row my-4" *ngFor="let list of lists">
+      <div class="col-12">
+        <app-list [list]="list"></app-list>
+      </div>
+    </div>
+    <div class="row my-2" *ngIf="lists.length == 0">
+      <p>Parece que aún no tienes listas propias creadas</p>
+      <p>Ve a tu perfil para <a [routerLink]="['/admin/lists']">añadir una nueva</a></p>
+    </div>
+  </div>
+
+  <div class="col-12 mt-4">
+    <h3 class="text-center">Listas de otros usuarios</h3>
+  </div>
+  <div class="container-fluid mt-0" *ngIf="lists2$ | async as lists2; else loading">
+    <div class="row my-4" *ngFor="let list2 of lists2">
+      <div class="col-12">
+        <app-list [list]="list2"></app-list>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<ng-template #loading>
+  <div class="loading">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+</ng-template>

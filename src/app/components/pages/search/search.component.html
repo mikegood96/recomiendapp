@@ -1,0 +1,81 @@
+<!-- Just an image -->
+<nav class="navbar navbar-dark bg-dark">
+  <a routerLink="/" class="navbar-brand" href="#">
+    <img src="assets/images/logo.png" width="30" height="30" alt="Logo RecomiendApp">
+  </a>
+
+  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <li class="nav-item active">
+      <ul class="navbar-nav menu">
+        <!--        Mostramos solo cuando se ha iniciado -->
+        <li class="nav-item active" *ngIf="authSvc.userData$ | async">
+          <a class="nav-link" (click)="showMenu()">Cuenta</a>
+        </li>
+
+        <ul id="showMenu" class="list-unstyled hide" *ngIf="authSvc.userData$ | async; else showLogin">
+          <li class="nav-item">
+            <a class="nav-link" (click)="showMenu()" routerLink="/admin">Editar</a>
+          </li>
+          <li class="nav-item" (click)="onLogOut()">
+            <a class="nav-link" routerLink="/login">Cerrar sesión</a>
+          </li>
+        </ul>
+
+
+        <ng-template #showLogin>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login">Iniciar</a>
+          </li>
+        </ng-template>
+
+      </ul>
+  </ul>
+
+</nav>
+
+<div class="container-fluid mt-4">
+  <h3>Buscar</h3>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <input type="text" class="form-control" name="filterList" placeholder="Buscar..." [(ngModel)]="filterList">
+<!--        <span>Buscar por usuarios</span>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>-->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid mt-0" *ngIf="lists$ | async as lists; else loading">
+    <div class="row my-4" *ngFor="let list of lists | filter:filterList">
+      <div class="col-12">
+        <app-list [list]="list"></app-list>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+<ng-template #loading>
+  <div class="loading">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+</ng-template>
+
+
+
+
+
+
+
+
+
+

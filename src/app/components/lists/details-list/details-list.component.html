@@ -1,0 +1,23 @@
+<ng-template #loading>
+  <div class="loading">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+</ng-template>
+
+<div class="container-fluid" *ngIf="list$ | async as list; else loading">
+
+  <div class="card list-card">
+    <img class="card-img-top" [src]="list.imageList" alt="">
+    <div class="card-body">
+      <h4 class="card-title">
+        {{ list.titleList }}
+      </h4>
+      <p class="card-text">
+        {{ list.contentList }}
+      </p>
+    </div>
+  </div>
+
+</div>

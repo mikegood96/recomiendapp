@@ -1,0 +1,23 @@
+
+.hide{
+  display: none;
+}
+.show {
+  display: block;
+}
+
+.menu{
+  text-align: center;
+  right: 2%;
+  position: absolute;
+  top: 12%;
+  width: 30%;
+  z-index: 2;
+  background-color: rgba(7, 7, 7, 0.87);
+  border-radius: 1rem;
+
+  & li {
+    color: whitesmoke;
+    padding: 0.2rem;
+  }
+}

@@ -1,0 +1,26 @@
+
+<nav class="navbar navbar-dark bg-dark">
+
+  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" (click)="showEdit()">Editar</a>
+      </li>
+
+      <ul id="showEdit" class="list-unstyled hide pl-3">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="showEdit()" routerLink="profile">Perfil</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" (click)="showEdit()" routerLink="lists">Listas</a>
+        </li>
+      </ul>
+
+    </ul>
+  </ul>
+
+</nav>
+
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>

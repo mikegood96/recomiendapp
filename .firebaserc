@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "t1-recomiendapp": {
+      "hosting": {
+        "recomiendapp": [
+          "t1-recomiendapp"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "t1-recomiendapp"
+  }
+}

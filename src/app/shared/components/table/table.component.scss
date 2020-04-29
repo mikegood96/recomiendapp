@@ -1,0 +1,14 @@
+
+.edit, .delete{
+  cursor: pointer;
+  max-width: 2rem;
+  display: inline-flex;
+  img{
+    max-width: 100%;
+  }
+}
+
+.add {
+  max-width: 3rem;
+  padding: 0.4rem;
+}

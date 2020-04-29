@@ -1,0 +1,51 @@
+
+.profile-photo {
+
+  max-width: 10rem;
+  display: block;
+  margin: 0 auto;
+
+  .label {
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    border-radius: 50%;
+
+      p {
+        position: absolute;
+        width: 100%;
+        background-color: rgba(29, 29, 29, 0.6);
+        color: whitesmoke;
+        text-transform: uppercase;
+        transition: all 0.5s ease;
+      }
+      img{
+        border-radius: 50%;
+        width: 100%;
+        display: block;
+        border: 2px solid #fff;
+
+        &:hover{
+          border: 2px solid #002658;
+          cursor: pointer;
+        }
+      }
+    }
+
+  .bottom {
+    p {
+      bottom: -50%;
+    }
+    &:hover p {
+      bottom: 0;
+    }
+  }
+}
+
+
+
+.card {
+  margin-top: 2rem;
+}

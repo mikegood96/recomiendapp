@@ -1,0 +1,16 @@
+
+  <div *ngIf="autSvc.userData$ | async" class="row mx-0 footer">
+    <div class="col" (click)="goToHome()">
+      <img src="./assets/images/home.png" alt="Inicio">
+      <p>Inicio</p>
+    </div>
+    <div class="col" (click)="goToSearch()">
+      <img src="./assets/images/search.png" alt="Buscar">
+      <p>Buscar</p>
+    </div>
+    <div class="col" (click)="goToShare()">
+      <img src="./assets/images/share.png" alt="Comparte">
+      <p>Comparte</p>
+    </div>
+  </div>
+

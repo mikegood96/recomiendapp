@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+  <div class="message" *ngIf="showMessage()">
+    <div class="row">
+      <div class="col">
+        <img src="assets/images/arrow-top.png" alt="flecha">
+      </div>
+      <div class="col p-0">
+        <p>Elige lo que editar</p>
+      </div>
+    </div>
+
+  </div>
+</div>

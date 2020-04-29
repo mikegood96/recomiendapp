@@ -1,0 +1,36 @@
+.list-card{
+  width: 100%;
+  margin: 1% auto;
+  padding: 2%;
+  border-radius: 0;
+  border: 0;
+
+  .card-title{
+    font-size:2rem;
+    text-transform: uppercase;
+  }
+
+  .card-body {
+    text-align: center;
+    margin: 0 auto;
+
+    p.card-text {
+      text-align: initial;
+    }
+  }
+
+  .card-img-top {
+    text-align: center;
+    clear: both;
+    display: block;
+    margin: 0.5rem auto;
+  }
+
+  img {
+    width: 40%;
+    border-radius: 0.5rem;
+  }
+}
+
+
+

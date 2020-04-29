@@ -1,0 +1,13 @@
+
+
+  <div class="col">
+    <div class="img-list">
+      <a [routerLink]="['/list', list.id]" >
+        <img [src]="list?.imageList" alt="Imagen Lista">
+      </a>
+    </div>
+    <p><a [routerLink]="['/list', list.id]" >{{ list.titleList }}</a></p>
+    <span class="badge badge-primary mx-2 p-2 justify-content-center">{{ list.tagsList }}</span>
+  </div>
+
+

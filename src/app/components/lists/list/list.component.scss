@@ -1,0 +1,52 @@
+.list-card{
+  width: 80%;
+  margin: 1% auto;
+  padding: 2%;
+  border-radius: 0;
+  border: 0;
+
+}
+
+.sport {
+  background-color: #017d43 !important;
+}
+
+.life {
+  background-color: #ff9900 !important;
+}
+
+.img-list{
+  max-width: 4rem;
+  height: 5rem;
+  display: block;
+  float: left;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.8rem;
+    filter: drop-shadow(2px 2px 5px black);
+  }
+}
+
+p {
+  float: left;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  font-size: 12pt;
+  a {
+    color: #103389 !important;
+  }
+}
+
+span {
+  margin-top: 0;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50%;
+}
+
+
